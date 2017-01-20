@@ -1,0 +1,29 @@
+{
+  "name": "node-thread-pool",
+  "version": "0.0.1",
+  "description": "Java-like ThreadPool for NodeJS",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ti0ma/node-thread-pool.git"
+  },
+  "keywords": [
+    "threadpool",
+    "thread",
+    "pool",
+    "node"
+  ],
+  "author": "Artem Molonosov @ti0ma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ti0ma/node-thread-pool/issues"
+  },
+  "homepage": "https://github.com/ti0ma/node-thread-pool#readme",
+  "devDependencies": {
+    "@types/node": "^6.0.60",
+    "typescript": "^2.1.5"
+  }
+}
