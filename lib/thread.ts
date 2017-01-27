@@ -1,5 +1,6 @@
 import * as ps from 'ps';
 import * as net from 'net';
+import * as pTimeout from 'p-timeout';
 
 declare type IThreadConfig = {
   parentCheckInterval: number;
@@ -25,8 +26,13 @@ export class Thread {
   constructor(public ppid: number, config: IThreadConfig) {
     this.config = Object.assign({}, baseConfig, config);
 
-    this.createSocket()
-      .then(this.initPatentCheck);
+    pTimeout(this.createSocket, 2000)
+      .then(this.initPatentCheck)
+      .catch(() => {
+        console.log('Can\'t connect to parent\'s socket');
+        console.log('Exiting.');
+        process.exit(1);
+      });
   }
 
   private createSocket() {

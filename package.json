@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "app-module-path": "^2.2.0",
+    "p-timeout": "^1.0.0",
     "ps": "0.0.2"
   }
 }
