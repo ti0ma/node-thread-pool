@@ -1,6 +1,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "lib/*": ["./lib/*"]
+    },
     "types": [
       "node"
     ],
