@@ -39,9 +39,7 @@ export class Thread {
     this.socket = new net.Socket();
     return new Promise((resolve, reject) => {
       this.socket.connect(this.config.socket.port, this.config.socket.ip, resolve);
-
       this.socket.on('data', this.processMessage.bind(this));
-
       this.socket.on('error', reject);
     });
   }
